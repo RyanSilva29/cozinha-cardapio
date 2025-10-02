@@ -89,13 +89,28 @@ th, td {
 }
 
 aside{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
+    margin-left: 100px;
+    margin-top: 20px;
+    padding: 20px;
+    font-family: 'inika', sans-serif;
+    font-size: 26px;
+    color: white;
+    border: 2px solid white;
+    
+}
+aside input, aside select, aside textarea, aside button{
     background-color: blue;
     color: white;
-    padding: 20px 300px;
+    width: 252px;
+    height: 51px;
+    font-size: 36px;
+    font-family: 'inika';
+    font-weight: 400;
+    font-style: normal;
+    line-height: 100%;
+    letter-spacing: 0%;
+    text-align: center;
+    vertical-align: middle;
 }
 
 footer{
