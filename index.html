@@ -1,27 +1,39 @@
 <!DOCTYPE html>
 <html lang="pt-br">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <link rel="stylesheet" href="style.css">
 </head>
+
 <body>
     <main>
-    <form>
-    <h2>Login</h2>
-    <fieldset>
-        <legend>Email</legend>
-        <input type="email" placeholder="">
-    </fieldset>
-   <fieldset>
-        <legend>Senha</legend>
-        <input type="password" placeholder="">
-    </fieldset>
-    <button type="submit" value="entrar">Entrar</button><br>
-    <a href="recuperar.html">Esqueceu a senha?</a>
-    <a href="cadastrar.html">Cadastrar</a>
-  
-    </form>
+            <header>
+                <h1>Seja bem-vindo</h1>
+                <h3>efetue seu login</h3>
+            </header>
+        <form>
+            <figure>
+                <img src="img/google.png" alt="">
+                <img src="img/face.png" alt="">
+            </figure>
+            <fieldset>
+                <legend>Email</legend>
+                <input type="email" placeholder="">
+            </fieldset>
+            <fieldset>
+                <legend>Senha</legend>
+                <input type="password" placeholder="">
+            </fieldset>
+            <button type="submit" value="entrar">Entrar</button><br>
+        </form>
+        <div>
+            <a href="recuperar.html" class="desativado">Esqueceu a senha?</a>
+            <a href="cadastrar.html">Cadastrar</a>
+        </div>
     </main>
 </body>
+
 </html>

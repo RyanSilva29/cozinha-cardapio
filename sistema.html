@@ -4,56 +4,75 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <link rel="stylesheet" href="sistema.css">
 </head>
 <body>
-
-<header>
-   <h1>Sistema Cozinha</h1>
-   <button type="submit" value="sair">Sair</button>
-</header>
-    <main>
-<section>
+  <header>
+    <h1>Sistema Cozinha</h1>
+    <button type="submit" value="sair">Sair</button>
+  </header>
+  <main>
+    <div>
+<section class="tabela">
     <h3>Lista de Cardapio</h3>
     <table>
     <tr>
       <th>Turno</th>
       <th>Data</th>
       <th>Refeição</th>
+      <th>Editar</th>
+      <th>Excluir</th>
     </tr>
     <tr>
       <td>Manhã</td>
       <td>22/09/2025</td>
       <td>Almoço</td>
+      <th>✏️</th>
+      <th>🗑️</th>
     </tr>
     <tr>
       <td>Tarde</td>
       <td>22/09/2025</td>
       <td>Almoço</td>
+      <th>✏️</th>
+       <th>🗑️</th>
     </tr>
     <tr>
       <td>Noite</td>
      <td>22/09/2025</td>
       <td>Jantar</td>
+      <th>✏️</th>
+       <th>🗑️</th>
     </tr>
     <tr>
       <td>Integral</td>
      <td>22/09/2025</td>
       <td>Lanche</td>
+      <th>✏️</th>
+       <th>🗑️</th>
     </tr>
   </table>
+
 </section>
-<section>
+<section class="conosco">
+  <div class="h3">
     <h3>Fale Conosco</h3>
+  </div>
+  <div class="opcao">
+    <div>
     <select name="" id="">
-            <option value="">Escolha uma opção</option>
-            <option value="reclamacao">Reclamação</option>
-            <option value="sugestao">Sugestão</option>
-            <option value="elogio">Elogio</option>
-            <option value="outro">Outro</option>
+      <option value="">Escolha uma opção</option>
+      <option value="reclamacao">Reclamação</option>
+      <option value="sugestao">Sugestão</option>
+      <option value="elogio">Elogio</option>
+      <option value="outro">Outro</option>
     </select><br> <!--  Vamos copiar do codigo original -->
     <textarea name="opiniao" id="opiniao" placeholder="Digite sua opinião aqui..." disabled="disabled"></textarea><br>
-            <button type="submit" value="enviar">Enviar</button>
+    </div>
+    <button type="submit" value="enviar">Enviar</button>
+  </div>
 </section>
+</div>
 <aside>
     <h3>Cadastrar Prato</h3>
     <form action="">
