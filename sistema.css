@@ -98,8 +98,9 @@ aside{
     border: 2px solid white;
     
 }
+
 aside input, aside select, aside textarea, aside button{
-    background-color: blue;
+    background-color: rgb(76, 139, 255);
     color: white;
     width: 252px;
     height: 51px;
