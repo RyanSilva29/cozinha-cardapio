@@ -6,7 +6,7 @@ document.getElementById('formLogin').addEventListener('submit', async(event)=>{
     const email=document.getElementById('email').value.trim();
     const senha=document.getElementById('senha').value.trim();
     if(!email||!senha){
-        mostrarMsg('Por favor, preencha email e senha.', res);
+        mostrarMsg('Por favor, preencha email e senha.', red);
         return
     }
     const botao= document.getElementById('entrar')
