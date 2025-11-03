@@ -13,6 +13,3 @@ async function buscarCardapio(id) {
 function exibirTabelaCardapio(cardapio) {
 
 }
-async function listarCardapio() {
-
-}

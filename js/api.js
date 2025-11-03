@@ -21,7 +21,7 @@ async function loginCozinheira(email, senha) {
         const data = await res.json();
         if (data.usuario) {
             localStorage.setItem('usuarioId:', data.usuario.id);
-            localStorage.setItem('usuarioNome:',data.usuario.nome);
+            localStorage.setItem('usuarioNome:', data.usuario.nome);
             localStorage.setItem('token:', data.token);
             return { sucesso: true, user: data.usuario, }
         } else {
@@ -63,5 +63,55 @@ async function recuperarSenha(email) {
     } catch (error) {
         console.error("Erro ao tentar recuperar senha", error);
         return { sucesso: false, mensagem: 'Erro de conexão a API' }
+    }
+}
+export async function listarCardapio() {
+    try {
+        const res = await fetch(API_USUARIOS);
+        const cardapios = await res.json();
+        return cardapios;
+    } catch (error) {
+        console.error('Erro ao listar cardapio', error);
+        alert('ocorreu um erro ao carregar cardápio');
+    }
+}
+export async function cadastrarCardapio(cardapio) {
+    try {
+
+    } catch (error) {
+        console.error('Erro ao cadastrar cardapio', error);
+        alert('ocorreu um erro ao carregar cardápio');
+    }
+}
+export async function alterarCardapio(id, atualizarCardapio) {
+    try {
+        const res = await fetch(API_USUARIOS);
+    } catch (error) {
+        console.error('Erro ao alterar cardapio', error);
+        alert('ocorreu um erro ao carregar cardápio');
+    }
+}
+export async function excluirCardapio(id) {
+    try {
+        const res = await fetch(API_USUARIOS);
+    } catch (error) {
+        console.error('Erro ao excluir cardapio', error);
+        alert('ocorreu um erro ao carregar cardápio');
+    }
+}
+export async function buscarCardapio(id) {
+    try {
+        const res = await fetch(API_USUARIOS);
+    } catch (error) {
+        console.error('Erro ao buscar cardapio', error);
+        alert('ocorreu um erro ao carregar cardápio');
+    }
+}
+export async function exibirTabelaCardapio(cardapio) {
+    try {
+        const res = await fetch(API_USUARIOS);
+    } catch (error) {
+        console.error('Erro ao exibir a tabela do cardapio', error);
+        alert('ocorreu um erro ao carregar cardápio');
     }
 }
