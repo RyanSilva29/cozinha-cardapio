@@ -49,7 +49,7 @@ async function cadastrarCozinheira(nome, email, senha) {
         return { sucesso: false, mensagem: 'Erro de conexão a API' }
     }
 }
-async function recuperarSenha(email) {
+export async function recuperarSenha(email) {
     try {
         const res = await fetch(API_USUARIOS + "/recuperar", {
             method: "POST",
@@ -80,15 +80,16 @@ export async function cadastrarCardapio(cardapio) {
 
     } catch (error) {
         console.error('Erro ao cadastrar cardapio', error);
-        alert('ocorreu um erro ao carregar cardápio');
+        alert('ocorreu um erro ao cadastrar cardápio');
     }
 }
 export async function alterarCardapio(id, atualizarCardapio) {
     try {
         const res = await fetch(API_USUARIOS);
+        const cardapios = await res.json();
     } catch (error) {
         console.error('Erro ao alterar cardapio', error);
-        alert('ocorreu um erro ao carregar cardápio');
+        alert('ocorreu um erro ao alterar cardápio');
     }
 }
 export async function excluirCardapio(id) {
@@ -96,7 +97,7 @@ export async function excluirCardapio(id) {
         const res = await fetch(API_USUARIOS);
     } catch (error) {
         console.error('Erro ao excluir cardapio', error);
-        alert('ocorreu um erro ao carregar cardápio');
+        alert('ocorreu um erro ao excluir cardápio');
     }
 }
 export async function buscarCardapio(id) {
@@ -104,7 +105,7 @@ export async function buscarCardapio(id) {
         const res = await fetch(API_USUARIOS);
     } catch (error) {
         console.error('Erro ao buscar cardapio', error);
-        alert('ocorreu um erro ao carregar cardápio');
+        alert('ocorreu um erro ao procurar cardápio');
     }
 }
 export async function exibirTabelaCardapio(cardapio) {
@@ -112,6 +113,6 @@ export async function exibirTabelaCardapio(cardapio) {
         const res = await fetch(API_USUARIOS);
     } catch (error) {
         console.error('Erro ao exibir a tabela do cardapio', error);
-        alert('ocorreu um erro ao carregar cardápio');
+        alert('ocorreu um erro ao exibir a tabela do cardapio cardápio');
     }
 }
