@@ -77,7 +77,18 @@ export async function listarCardapio() {
 }
 export async function cadastrarCardapio(cardapio) {
     try {
-
+        cardapio.usuarioId=Number(localStorage.getItem('usuarioId'));
+        const res=await fetch(API_USUARIOS,{
+            method:'post',
+            headers:{'Content-Type':'application.json'},
+            body:json.stringify(cardapio)
+        });
+        if (res.ok) {
+            alert('refeição cadastrada com sucesso!');
+            listarCardapio();
+        } else {
+            alert('Erro ao cadastrar refeição');
+        }
     } catch (error) {
         console.error('Erro ao cadastrar cardapio', error);
         alert('ocorreu um erro ao cadastrar cardápio');
@@ -85,8 +96,16 @@ export async function cadastrarCardapio(cardapio) {
 }
 export async function alterarCardapio(id, atualizarCardapio) {
     try {
-        const res = await fetch(API_USUARIOS);
-        const cardapios = await res.json();
+        const res = await fetch(`API_USUARIOS/${id}`);
+        const cardapio = await res.json();
+        document.querySelector('#date').value=cardapio.date.split('T')[0];
+        document.querySelector('select#turno').value=cardapio.turno;
+        document.querySelector("input[name='refeicao']").value=cardapio.refeicao.titulo;
+        document.querySelector("textarea[name='itens']").value=cardapio.refeicao.itens.join(',');
+        document.querySelector("input[name='bebida']").value=cardapio.refeicao.bebida.join(',')
+        if(cardapio.lanche){
+            
+        }
     } catch (error) {
         console.error('Erro ao alterar cardapio', error);
         alert('ocorreu um erro ao alterar cardápio');
