@@ -1,5 +1,5 @@
-//const imgbbAPIKey = 'SUA_API_KEY_DO_IMGBB'; // Substitua por sua chave real
-const imgbbAPIKey = 'ae4c387617b87521016772a4bf82172b'; // Substitua pela sua chave real
+const imgbbAPIKey = "da72e82a8db4340bd37855b438c4de46"; // Substitua por sua chave real
+//const imgbbAPIKey = 'ae4c387617b87521016772a4bf82172b'; // Substitua pela sua chave real
 
 const fileInput = document.getElementById('img');
 const hiddenInputUrl = document.getElementById('img-url');
